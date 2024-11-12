@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head><title>Flight List</title>    <!-- Add Tailwind CSS via CDN -->
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Flight List</title>    <!-- Add Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-r from-blue-50 to-indigo-100 font-sans">
@@ -29,7 +30,7 @@
                 <td class="px-4 py-2" th:text="${flight.scheduledArrival}"></td>
                 <td class="px-4 py-2" th:text="${flight.departureAirport}"></td>
                 <td class="px-4 py-2" th:text="${flight.arrivalAirport}"></td>
-                <td class="px-4 py-2" th:text="${flight.status}"></td>                <
+                <td class="px-4 py-2" th:text="${flight.status}"></td>
                 <td class="px-4 py-2 text-center space-x-2">
                     <form th:action="@{/flights/delete/{id}(id=${flight.flightId})}" method="post" class="inline-block">
                         <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none">Delete</button>
